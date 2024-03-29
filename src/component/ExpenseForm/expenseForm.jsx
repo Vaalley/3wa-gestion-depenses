@@ -33,7 +33,7 @@ export const categories = [
 ];
 
 const ExpenseForm = () => {
-	const { state, dispatch } = useExpenseContext();
+	const { dispatch } = useExpenseContext();
 	const initialState = {
 		titre: "",
 		amount: "",
@@ -109,7 +109,7 @@ const ExpenseForm = () => {
 					);
 				})}
 			</select>
-			<input type="submit" value={"ajouter"} />
+			<input type="submit" value={"ajouter"} className="btn_add" />
 		</form>
 	);
 };

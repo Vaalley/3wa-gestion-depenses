@@ -4,10 +4,10 @@ import ExpenseList from "./component/ExpenseList/expenseList";
 
 function App() {
 	return (
-		<>
+		<div className="app">
 			<ExpenseForm />
 			<ExpenseList />
-		</>
+		</div>
 	);
 }
 
