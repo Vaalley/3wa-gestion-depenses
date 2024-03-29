@@ -78,7 +78,7 @@ const ExpenseForm = () => {
 
 	return (
 		<form onSubmit={handleSubmit} className={"taskForm"}>
-			<h3>Ajouter une dépense</h3>
+			<h2>Ajouter une dépense</h2>
 			{message !== "" && <span style={{ color: "red" }}>{message}</span>}
 			<input
 				onChange={handleChange}

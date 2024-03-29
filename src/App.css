@@ -3,11 +3,7 @@
 	margin: 0 auto;
 	padding: 2rem;
 	text-align: center;
-}
-
-body {
-	background-color: lightgray;
-	color: #222;
+	width: 80%;
 }
 
 .app {
@@ -15,6 +11,7 @@ body {
 	border-radius: 5px;
 	padding: 2rem;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	background-color: lightgray;
 }
 
 button,
@@ -26,11 +23,19 @@ select {
 	background-color: #333;
 	color: #fff;
 	transition: 0.2s;
+	border-radius: 5px;
 }
 
 ul {
 	list-style-type: none;
 	padding-left: 0px;
+}
+
+td,
+th {
+	border: 1px solid black;
+	padding: 10px;
+	border-radius: 5px;
 }
 
 .btn_add:hover {
@@ -45,12 +50,39 @@ select:hover {
 	background-color: #444;
 }
 
+input:focus::placeholder {
+	opacity: 0;
+}
+
 ::placeholder {
-	color: #aaa;
+	color: #fff;
 }
 
 form {
 	display: flex;
 	flex-direction: column;
 	gap: 5px;
+}
+
+.table {
+	margin-top: 1rem;
+}
+
+.container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.footer {
+	width: 100%;
+	text-align: center;
+	font-size: 1.5rem;
+	font-weight: bold;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+.footer:after {
+	content: "€";
 }

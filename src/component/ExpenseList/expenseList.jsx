@@ -9,17 +9,33 @@ const ExpenseList = () => {
 		? expenses.filter((expense) => expense.categorie.id === parseInt(filter))
 		: expenses;
 	return (
-		<div>
-			<h3>Liste des dépenses</h3>
+		<div className="container">
+			<h2>Liste des dépenses</h2>
 			<ExpenseFilter />
-			<ul>
-				{filteredExpenses.map((expense) => (
-					<li key={expense.id}>
-						{expense.titre} - {expense.amount} - {expense.categorie.name}
-					</li>
-				))}
-			</ul>
-			<div>
+			<table className="table">
+				<colgroup>
+					<col style={{ width: "33%" }} />
+					<col style={{ width: "33%" }} />
+					<col style={{ width: "33%" }} />
+				</colgroup>
+				<thead>
+					<tr>
+						<th>Titre</th>
+						<th>Dépense (€)</th>
+						<th>Catégorie</th>
+					</tr>
+				</thead>
+				<tbody>
+					{filteredExpenses.map((expense) => (
+						<tr key={expense.id}>
+							<td>{expense.titre}</td>
+							<td>{expense.amount}</td>
+							<td>{expense.categorie.name}</td>
+						</tr>
+					))}
+				</tbody>
+			</table>
+			<div className="footer">
 				Total :{" "}
 				{parseFloat(
 					filteredExpenses.reduce(

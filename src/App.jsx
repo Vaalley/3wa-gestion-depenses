@@ -5,6 +5,7 @@ import ExpenseList from "./component/ExpenseList/expenseList";
 function App() {
 	return (
 		<div className="app">
+			<h1>Gestion des dépenses</h1>
 			<ExpenseForm />
 			<ExpenseList />
 		</div>
